@@ -13,17 +13,6 @@ bool isEmpty() {
             else  return true;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 void pop () {
     Stack[ind] = 0;
     --ind;
@@ -35,7 +24,7 @@ int top () {
 int main()
 {
     ind = 0;
-
+    
     push(1);
     push(2);
 
@@ -43,7 +32,6 @@ int main()
 
     pop();
     pop();
-
 
     return 0;
 }
