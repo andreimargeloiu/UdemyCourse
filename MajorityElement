@@ -14,10 +14,11 @@ int main ()
 
     // A[n/2+1] can be the majority element
     int majorityElement=A[n/2+1];
-    int nrOccurrences=0;
-
-    for (int i=1; i<=n; ++i)
-        if (A[i]==majorityElement) ++nrOccurrences;
+  
+	auto it2=upper_bound(A,A+n,majorityElement);
+	auto it1=lower_bound(A,A+n,majorityElement);
+    
+	nrOccurrences=it2-it1;
 
     if (nrOccurrences >= n/2 + 1) {
         cout<<"The majority element is "<<majorityElement;
