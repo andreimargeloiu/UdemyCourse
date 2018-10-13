@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+
+int ksweight;
+int items;
+int  value[5];
+int  weight[5];
+int dp[5][11];
+ 
+using namespace std;
+ 
+ int main(){
+  
+  int ksweight=10;
+   int items =4;
+     
+      value[1]=2;
+      value[2]=3;
+      value[3]=4;
+      value[4]=5;
+      
+      weight[1]=1;
+      weight[2]=4;
+      weight[3]=5;
+      weight[4]=3;
+      
+      cout<<knapsackValue();
+      
+ }
+ 
+int knapsackValue(){
+    
+    for(int i=1;i<=items;i++)
+        for(int k=1;k<=ksweight;k++)
+              dp[i][k]=max(dp[i-1][k],weight[i]<=k?value[i]+dp[i-1][k-weight[i]]:0);
+        
+ 
+      return dp[items][ksweight];
+ 
+}
