@@ -25,7 +25,7 @@ bool verify (char input[]) {
 
         if (input[i] == ')') {
             // if the stack is empty, or the last parenthesis is different
-            // than the one we are closic, then the input is wrong
+            // than the one we are closing, then the input is wrong
             if (isEmpty() || Stack[ind] != 1) return false;
             else {
                 Stack[ind] = 0;
@@ -34,7 +34,7 @@ bool verify (char input[]) {
         }
         if (input[i] == ']') {
             // if the stack is empty, or the last parenthesis is different
-            // than the one we are closic, then the input is wrong
+            // than the one we are closing, then the input is wrong
             if (isEmpty() || Stack[ind] != 2) return false;
             else {
                 Stack[ind] = 0;
@@ -43,7 +43,7 @@ bool verify (char input[]) {
         }
         if (input[i] == '}') {
             // if the stack is empty, or the last parenthesis is different
-            // than the one we are closic, then the input is wrong
+            // than the one we are closing, then the input is wrong
             if (isEmpty() || Stack[ind] != 3) return false;
             else {
                 Stack[ind] = 0;
