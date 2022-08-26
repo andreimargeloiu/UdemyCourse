@@ -14,6 +14,7 @@ int main ()
         scanf ("%d", &X); //read the number we are searching
 
         result=-1;
+        
         Left=0; Right=n-1;
 
         while (Left <= Right) {
